@@ -26,6 +26,10 @@ also than
 ```bash
 touch privateKeys.json
 ````
+also copy priv keys
+```bash
+nano privateKeys.json
+````
 for tx
 ```bash
 npm start
