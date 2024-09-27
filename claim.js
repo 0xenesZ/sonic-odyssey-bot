@@ -417,7 +417,7 @@ async function dailyLogin(token, keypair) {
     console.log(`Error in bot operation: ${error}`.red);
   } finally {
     console.log(
-      'Thanks for having us! Subscribe: https://t.me/HappyCuanAirdrop'.magenta
+      'Halitin gotunu basarıyla siktiniz'.magenta
     );
   }
 })();
