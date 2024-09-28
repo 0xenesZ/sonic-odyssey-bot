@@ -417,7 +417,7 @@ async function dailyLogin(token, keypair) {
     console.log(`Error in bot operation: ${error}`.red);
   } finally {
     console.log(
-      'Halitin gotunu basarıyla siktiniz'.magenta
+      'helal, basarili'.magenta
     );
   }
 })();
