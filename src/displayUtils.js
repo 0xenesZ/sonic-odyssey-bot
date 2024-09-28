@@ -6,8 +6,8 @@ function displayHeader() {
   process.stdout.write('\x1Bc');
   console.log('========================================'.cyan);
   console.log('=           Sonic Odyssey BOT          ='.cyan);
-  console.log('=     Created by HalilIbrahim          ='.cyan);
-  console.log('=                ozkardesler A.S       ='.cyan);
+  console.log('=           Created by 0xenesZ          ='.cyan);
+  console.log('=             ozkardesler A.S       ='.cyan);
   console.log('========================================'.cyan);
   console.log();
 }
