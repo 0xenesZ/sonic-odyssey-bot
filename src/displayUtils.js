@@ -1,29 +1,34 @@
 require('colors');
-const readlineSync = require('readline-sync');
+const inquirer = require('inquirer');
 const { setNetType } = require('./solanaUtils');
 
 function displayHeader() {
   process.stdout.write('\x1Bc');
   console.log('========================================'.cyan);
   console.log('=           Sonic Odyssey BOT          ='.cyan);
-  console.log('=           Created by 0xenesZ          ='.cyan);
-  console.log('=             ozkardesler A.S       ='.cyan);
+  console.log('=         Created by anasseth31        ='.cyan);
+  console.log('=                                      ='.cyan);
   console.log('========================================'.cyan);
   console.log();
 }
 
-function getNetworkTypeFromUser() {
-  const net = readlineSync.question('Select network type (1 for Devnet, 2 for Testnet): '.blue);
+async function getNetworkTypeFromUser() {
+  const answers = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'network',
+      message: 'Select network type:'.blue,
+      choices: [
+        { name: 'Devnet', value: 1 },
+        { name: 'Testnet', value: 2 },
+      ],
+    },
+  ]);
 
-  if (net == '1') {
-    setNetType(1);
-  }
-  else if (net == '2') {
-    setNetType(2);
-  }
+  setNetType(answers.network);
 }
 
 module.exports = {
   displayHeader,
-  getNetworkTypeFromUser
+  getNetworkTypeFromUser,
 };
