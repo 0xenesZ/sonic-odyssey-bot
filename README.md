@@ -30,6 +30,9 @@ also copy priv keys
 ```bash
 nano privateKeys.json
 ````
+```bash
+npm install inquirer
+````
 for tx
 ```bash
 npm start
